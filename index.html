@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELOC — Outrun Everything</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">VELOC</div>
+  <ul class="nav-links">
+    <li><a href="#course">Tech</a></li>
+    <li><a href="#showcase">Shop</a></li>
+    <li><a href="#stats">Numbers</a></li>
+  </ul>
+  <a href="#showcase" class="nav-cta">Shop Now</a>
+</nav>
+
+<header class="hero">
+  <div class="scene" aria-hidden="true">
+    <div class="road"></div>
+    <div class="lane-edge left"></div>
+    <div class="lane-edge right"></div>
+
+    <div class="obstacle ob1"><div class="block"></div></div>
+    <div class="obstacle lime ob2"><div class="block"></div></div>
+    <div class="obstacle steel ob3"><div class="block"></div></div>
+    <div class="obstacle ob4"><div class="block"></div></div>
+    <div class="obstacle lime ob5"><div class="block"></div></div>
+    <div class="obstacle steel ob6"><div class="block"></div></div>
+
+    <div class="runner-wrap">
+      <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bodyGrad-hero" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="60%" stop-color="#E9E7E0"/>
+            <stop offset="100%" stop-color="#B8B5AB"/>
+          </linearGradient>
+          <linearGradient id="soleGrad-hero" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#4a4a50"/>
+            <stop offset="40%" stop-color="#222226"/>
+            <stop offset="100%" stop-color="#070708"/>
+          </linearGradient>
+          <linearGradient id="accentGrad-hero" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF6A1A"/>
+            <stop offset="100%" stop-color="#D43900"/>
+          </linearGradient>
+          <radialGradient id="shadowGrad-hero" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#000000" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="heelGrad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#5c5c62"/>
+            <stop offset="100%" stop-color="#26262a"/>
+          </linearGradient>
+          <clipPath id="shoeClip-hero">
+            <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"/>
+          </clipPath>
+        </defs>
+
+        <ellipse cx="190" cy="196" rx="175" ry="13" fill="url(#shadowGrad-hero)"/>
+
+        <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"
+          fill="url(#bodyGrad-hero)"/>
+
+        <g clip-path="url(#shoeClip-hero)">
+          <path d="M255 80 C 272 92, 288 108, 300 128 C 308 142, 310 156, 306 172 L 250 175 C 258 150, 256 122, 244 96 Z" fill="url(#heelGrad-hero)"/>
+          <path d="M20 158 L24 140 C 27 122, 36 106, 50 95 L 78 100 C 62 114, 52 132, 50 154 L 48 174 L 32 175 C 24 172, 20 166, 20 158 Z" fill="#d8d5cc"/>
+          <path d="M58 138 C 110 122, 175 110, 248 104 C 256 103, 262 108, 260 114 C 258 120, 250 124, 242 125 C 175 132, 115 144, 68 160 C 60 163, 53 159, 54 152 C 55 146, 55 141, 58 138 Z" fill="url(#accentGrad-hero)"/>
+          <path d="M80 132 L150 70" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+          <path d="M210 116 L250 88" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+          <g fill="#9c998f" opacity="0.45">
+            <circle cx="60" cy="118" r="1.4"/><circle cx="68" cy="112" r="1.4"/><circle cx="76" cy="106" r="1.4"/>
+            <circle cx="64" cy="126" r="1.4"/><circle cx="72" cy="120" r="1.4"/><circle cx="80" cy="114" r="1.4"/>
+            <circle cx="68" cy="134" r="1.4"/><circle cx="76" cy="128" r="1.4"/><circle cx="84" cy="122" r="1.4"/>
+          </g>
+          <path d="M148 62 C 161 56, 176 54, 189 57 C 186 68, 182 80, 180 92 L 158 90 C 157 80, 153 70, 148 62 Z" fill="#e3e0d7"/>
+          <path d="M148 62 C 161 56, 176 54, 189 57" stroke="#ffffff" stroke-width="2" opacity="0.7" fill="none"/>
+          <path d="M158 90 L180 92 L179 96 L159 94 Z" fill="#c4c1b6"/>
+          <g stroke="#7a766c" stroke-width="3" stroke-linecap="round">
+            <line x1="142" y1="64" x2="124" y2="86"/>
+            <line x1="158" y1="58" x2="141" y2="80"/>
+            <line x1="176" y1="54" x2="160" y2="75"/>
+            <line x1="194" y1="53" x2="180" y2="73"/>
+            <line x1="212" y1="56" x2="200" y2="75"/>
+          </g>
+          <g stroke="#3f3c36" stroke-width="1" stroke-linecap="round" opacity="0.5">
+            <line x1="142" y1="64" x2="124" y2="86"/>
+            <line x1="158" y1="58" x2="141" y2="80"/>
+            <line x1="176" y1="54" x2="160" y2="75"/>
+            <line x1="194" y1="53" x2="180" y2="73"/>
+            <line x1="212" y1="56" x2="200" y2="75"/>
+          </g>
+          <g fill="#2a2a2c">
+            <circle cx="142" cy="64" r="2.2"/><circle cx="124" cy="86" r="2.2"/>
+            <circle cx="158" cy="58" r="2.2"/><circle cx="141" cy="80" r="2.2"/>
+            <circle cx="176" cy="54" r="2.2"/><circle cx="160" cy="75" r="2.2"/>
+            <circle cx="194" cy="53" r="2.2"/><circle cx="180" cy="73" r="2.2"/>
+            <circle cx="212" cy="56" r="2.2"/><circle cx="200" cy="75" r="2.2"/>
+          </g>
+          <path d="M64 90 L140 56 C 158 48, 178 45, 196 49 L 215 53 C 180 56, 140 68, 100 92 C 88 99, 76 100, 68 96 Z" fill="#ffffff" opacity="0.5"/>
+          <path d="M255 80 C 268 90, 280 102, 290 116 L 278 122 C 270 108, 260 96, 248 86 Z" fill="#15151a"/>
+          <path d="M298 118 C 304 122, 308 128, 308 134 C 308 140, 303 143, 297 141 C 293 139, 291 134, 292 129 C 293 124, 295 120, 298 118 Z" fill="#1b1b1f" stroke="#54545a" stroke-width="1"/>
+        </g>
+
+        <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150
+          L 334 134 C 328 138, 318 144, 300 148 C 230 162, 130 168, 50 172 C 35 173, 23 169, 22 162 Z"
+          fill="url(#soleGrad-hero)"/>
+        <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150"
+          fill="none" stroke="#6a6a70" stroke-width="1" opacity="0.5"/>
+        <g stroke="#000000" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+          <line x1="60" y1="174" x2="59" y2="180"/>
+          <line x1="95" y1="171" x2="94" y2="178"/>
+          <line x1="130" y1="169" x2="129" y2="176"/>
+          <line x1="165" y1="166" x2="164" y2="173"/>
+          <line x1="200" y1="163" x2="200" y2="171"/>
+          <line x1="235" y1="160" x2="235" y2="168"/>
+          <line x1="270" y1="156" x2="270" y2="164"/>
+          <line x1="305" y1="150" x2="306" y2="158"/>
+        </g>
+        <path d="M24 152 C 26 148, 32 145, 40 144 L 318 122" fill="none" stroke="#86868c" stroke-width="2" opacity="0.4"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="hero-fade"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow">Engineered for the Chase</span>
+    <h1>Outrun<br>your <span class="accent">last</span> pace.</h1>
+    <p class="hero-sub">VELOC isn't built for the treadmill. It's built for the gap between where you are and where you're trying to be — one stride at a time.</p>
+    <div class="hero-actions">
+      <a href="#showcase" class="btn-primary">Shop The Drop</a>
+      <a href="#course" class="btn-secondary">See The Tech</a>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>★ ZERO-DRAG MESH ★ RAPID-FOAM MIDSOLE ★ SUB-200G WEIGHT ★ ALL-TERRAIN GRIP ★ ZERO-DRAG MESH ★ RAPID-FOAM MIDSOLE ★ SUB-200G WEIGHT ★ ALL-TERRAIN GRIP ★</span>
+  </div>
+</div>
+
+<section class="course" id="course">
+  <div class="section-head">
+    <div>
+      <span class="tag">The Obstacle Course</span>
+      <h2>Three things<br>standing between<br>you and slow.</h2>
+    </div>
+    <p>Every run is a course. Heat, fatigue, terrain — VELOC's build clears each hurdle so your pace doesn't have to break stride.</p>
+  </div>
+
+  <div class="course-track">
+    <article class="hurdle-card">
+      <span class="num">HURDLE 01 — HEAT</span>
+      <div class="hurdle-bar"></div>
+      <h3>Zero-Drag Mesh</h3>
+      <p>An engineered knit that vents heat the instant it builds, so your foot runs as cool at mile ten as it did at the start line.</p>
+    </article>
+    <article class="hurdle-card">
+      <span class="num">HURDLE 02 — FATIGUE</span>
+      <div class="hurdle-bar"></div>
+      <h3>Rapid-Foam Core</h3>
+      <p>A reactive midsole that returns energy on every strike, cutting the muscular drag that turns lap four into a grind.</p>
+    </article>
+    <article class="hurdle-card">
+      <span class="num">HURDLE 03 — TERRAIN</span>
+      <div class="hurdle-bar"></div>
+      <h3>All-Grip Outsole</h3>
+      <p>A lugged pattern tuned for wet asphalt and loose trail alike, so the surface under you stops dictating your pace.</p>
+    </article>
+  </div>
+</section>
+
+<section class="showcase" id="showcase">
+  <div class="section-head">
+    <div>
+      <span class="tag">The Lineup</span>
+      <h2>Pick your pace.</h2>
+    </div>
+    <p>Three builds, one obsession: shaving tenths off the seconds that actually matter.</p>
+  </div>
+
+  <div class="product-grid">
+
+    <article class="product-card">
+      <div class="product-inner">
+        <div class="product-shoe">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bodyGrad-surge" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="60%" stop-color="#E9E7E0"/>
+                <stop offset="100%" stop-color="#B8B5AB"/>
+              </linearGradient>
+              <linearGradient id="soleGrad-surge" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a4a50"/>
+                <stop offset="40%" stop-color="#222226"/>
+                <stop offset="100%" stop-color="#070708"/>
+              </linearGradient>
+              <linearGradient id="accentGrad-surge" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#FF6A1A"/>
+                <stop offset="100%" stop-color="#D43900"/>
+              </linearGradient>
+              <linearGradient id="heelGrad-surge" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5c5c62"/>
+                <stop offset="100%" stop-color="#26262a"/>
+              </linearGradient>
+              <clipPath id="shoeClip-surge">
+                <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"/>
+              </clipPath>
+            </defs>
+            <ellipse cx="190" cy="196" rx="175" ry="13" fill="#000000" opacity="0.18"/>
+            <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"
+              fill="url(#bodyGrad-surge)"/>
+            <g clip-path="url(#shoeClip-surge)">
+              <path d="M255 80 C 272 92, 288 108, 300 128 C 308 142, 310 156, 306 172 L 250 175 C 258 150, 256 122, 244 96 Z" fill="url(#heelGrad-surge)"/>
+              <path d="M20 158 L24 140 C 27 122, 36 106, 50 95 L 78 100 C 62 114, 52 132, 50 154 L 48 174 L 32 175 C 24 172, 20 166, 20 158 Z" fill="#d8d5cc"/>
+              <path d="M58 138 C 110 122, 175 110, 248 104 C 256 103, 262 108, 260 114 C 258 120, 250 124, 242 125 C 175 132, 115 144, 68 160 C 60 163, 53 159, 54 152 C 55 146, 55 141, 58 138 Z" fill="url(#accentGrad-surge)"/>
+              <path d="M80 132 L150 70" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+              <path d="M210 116 L250 88" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+              <g fill="#9c998f" opacity="0.45">
+                <circle cx="60" cy="118" r="1.4"/><circle cx="68" cy="112" r="1.4"/><circle cx="76" cy="106" r="1.4"/>
+                <circle cx="64" cy="126" r="1.4"/><circle cx="72" cy="120" r="1.4"/><circle cx="80" cy="114" r="1.4"/>
+                <circle cx="68" cy="134" r="1.4"/><circle cx="76" cy="128" r="1.4"/><circle cx="84" cy="122" r="1.4"/>
+              </g>
+              <path d="M148 62 C 161 56, 176 54, 189 57 C 186 68, 182 80, 180 92 L 158 90 C 157 80, 153 70, 148 62 Z" fill="#e3e0d7"/>
+              <path d="M148 62 C 161 56, 176 54, 189 57" stroke="#ffffff" stroke-width="2" opacity="0.7" fill="none"/>
+              <path d="M158 90 L180 92 L179 96 L159 94 Z" fill="#c4c1b6"/>
+              <g stroke="#7a766c" stroke-width="3" stroke-linecap="round">
+                <line x1="142" y1="64" x2="124" y2="86"/>
+                <line x1="158" y1="58" x2="141" y2="80"/>
+                <line x1="176" y1="54" x2="160" y2="75"/>
+                <line x1="194" y1="53" x2="180" y2="73"/>
+                <line x1="212" y1="56" x2="200" y2="75"/>
+              </g>
+              <g stroke="#3f3c36" stroke-width="1" stroke-linecap="round" opacity="0.5">
+                <line x1="142" y1="64" x2="124" y2="86"/>
+                <line x1="158" y1="58" x2="141" y2="80"/>
+                <line x1="176" y1="54" x2="160" y2="75"/>
+                <line x1="194" y1="53" x2="180" y2="73"/>
+                <line x1="212" y1="56" x2="200" y2="75"/>
+              </g>
+              <g fill="#2a2a2c">
+                <circle cx="142" cy="64" r="2.2"/><circle cx="124" cy="86" r="2.2"/>
+                <circle cx="158" cy="58" r="2.2"/><circle cx="141" cy="80" r="2.2"/>
+                <circle cx="176" cy="54" r="2.2"/><circle cx="160" cy="75" r="2.2"/>
+                <circle cx="194" cy="53" r="2.2"/><circle cx="180" cy="73" r="2.2"/>
+                <circle cx="212" cy="56" r="2.2"/><circle cx="200" cy="75" r="2.2"/>
+              </g>
+              <path d="M64 90 L140 56 C 158 48, 178 45, 196 49 L 215 53 C 180 56, 140 68, 100 92 C 88 99, 76 100, 68 96 Z" fill="#ffffff" opacity="0.5"/>
+              <path d="M255 80 C 268 90, 280 102, 290 116 L 278 122 C 270 108, 260 96, 248 86 Z" fill="#15151a"/>
+              <path d="M298 118 C 304 122, 308 128, 308 134 C 308 140, 303 143, 297 141 C 293 139, 291 134, 292 129 C 293 124, 295 120, 298 118 Z" fill="#1b1b1f" stroke="#54545a" stroke-width="1"/>
+            </g>
+            <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150
+              L 334 134 C 328 138, 318 144, 300 148 C 230 162, 130 168, 50 172 C 35 173, 23 169, 22 162 Z"
+              fill="url(#soleGrad-surge)"/>
+            <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150"
+              fill="none" stroke="#6a6a70" stroke-width="1" opacity="0.5"/>
+            <g stroke="#000000" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+              <line x1="60" y1="174" x2="59" y2="180"/>
+              <line x1="95" y1="171" x2="94" y2="178"/>
+              <line x1="130" y1="169" x2="129" y2="176"/>
+              <line x1="165" y1="166" x2="164" y2="173"/>
+              <line x1="200" y1="163" x2="200" y2="171"/>
+              <line x1="235" y1="160" x2="235" y2="168"/>
+              <line x1="270" y1="156" x2="270" y2="164"/>
+              <line x1="305" y1="150" x2="306" y2="158"/>
+            </g>
+            <path d="M24 152 C 26 148, 32 145, 40 144 L 318 122" fill="none" stroke="#86868c" stroke-width="2" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3>Surge RC</h3>
+        <p style="color:rgba(245,243,238,0.6); font-size:0.88rem;">Race-day carbon plate, built for the 10K PR.</p>
+        <div class="product-meta">
+          <span class="price">$179</span>
+          <span class="stat">189G</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-inner">
+        <div class="product-shoe">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bodyGrad-drift" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="60%" stop-color="#E9E7E0"/>
+                <stop offset="100%" stop-color="#B8B5AB"/>
+              </linearGradient>
+              <linearGradient id="soleGrad-drift" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a4a50"/>
+                <stop offset="40%" stop-color="#222226"/>
+                <stop offset="100%" stop-color="#070708"/>
+              </linearGradient>
+              <linearGradient id="accentGrad-drift" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#C9FF3D"/>
+                <stop offset="100%" stop-color="#7DB81E"/>
+              </linearGradient>
+              <linearGradient id="heelGrad-drift" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5c5c62"/>
+                <stop offset="100%" stop-color="#26262a"/>
+              </linearGradient>
+              <clipPath id="shoeClip-drift">
+                <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"/>
+              </clipPath>
+            </defs>
+            <ellipse cx="190" cy="196" rx="175" ry="13" fill="#000000" opacity="0.18"/>
+            <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"
+              fill="url(#bodyGrad-drift)"/>
+            <g clip-path="url(#shoeClip-drift)">
+              <path d="M255 80 C 272 92, 288 108, 300 128 C 308 142, 310 156, 306 172 L 250 175 C 258 150, 256 122, 244 96 Z" fill="url(#heelGrad-drift)"/>
+              <path d="M20 158 L24 140 C 27 122, 36 106, 50 95 L 78 100 C 62 114, 52 132, 50 154 L 48 174 L 32 175 C 24 172, 20 166, 20 158 Z" fill="#d8d5cc"/>
+              <path d="M58 138 C 110 122, 175 110, 248 104 C 256 103, 262 108, 260 114 C 258 120, 250 124, 242 125 C 175 132, 115 144, 68 160 C 60 163, 53 159, 54 152 C 55 146, 55 141, 58 138 Z" fill="url(#accentGrad-drift)"/>
+              <path d="M80 132 L150 70" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+              <path d="M210 116 L250 88" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+              <g fill="#9c998f" opacity="0.45">
+                <circle cx="60" cy="118" r="1.4"/><circle cx="68" cy="112" r="1.4"/><circle cx="76" cy="106" r="1.4"/>
+                <circle cx="64" cy="126" r="1.4"/><circle cx="72" cy="120" r="1.4"/><circle cx="80" cy="114" r="1.4"/>
+                <circle cx="68" cy="134" r="1.4"/><circle cx="76" cy="128" r="1.4"/><circle cx="84" cy="122" r="1.4"/>
+              </g>
+              <path d="M148 62 C 161 56, 176 54, 189 57 C 186 68, 182 80, 180 92 L 158 90 C 157 80, 153 70, 148 62 Z" fill="#e3e0d7"/>
+              <path d="M148 62 C 161 56, 176 54, 189 57" stroke="#ffffff" stroke-width="2" opacity="0.7" fill="none"/>
+              <path d="M158 90 L180 92 L179 96 L159 94 Z" fill="#c4c1b6"/>
+              <g stroke="#7a766c" stroke-width="3" stroke-linecap="round">
+                <line x1="142" y1="64" x2="124" y2="86"/>
+                <line x1="158" y1="58" x2="141" y2="80"/>
+                <line x1="176" y1="54" x2="160" y2="75"/>
+                <line x1="194" y1="53" x2="180" y2="73"/>
+                <line x1="212" y1="56" x2="200" y2="75"/>
+              </g>
+              <g stroke="#3f3c36" stroke-width="1" stroke-linecap="round" opacity="0.5">
+                <line x1="142" y1="64" x2="124" y2="86"/>
+                <line x1="158" y1="58" x2="141" y2="80"/>
+                <line x1="176" y1="54" x2="160" y2="75"/>
+                <line x1="194" y1="53" x2="180" y2="73"/>
+                <line x1="212" y1="56" x2="200" y2="75"/>
+              </g>
+              <g fill="#2a2a2c">
+                <circle cx="142" cy="64" r="2.2"/><circle cx="124" cy="86" r="2.2"/>
+                <circle cx="158" cy="58" r="2.2"/><circle cx="141" cy="80" r="2.2"/>
+                <circle cx="176" cy="54" r="2.2"/><circle cx="160" cy="75" r="2.2"/>
+                <circle cx="194" cy="53" r="2.2"/><circle cx="180" cy="73" r="2.2"/>
+                <circle cx="212" cy="56" r="2.2"/><circle cx="200" cy="75" r="2.2"/>
+              </g>
+              <path d="M64 90 L140 56 C 158 48, 178 45, 196 49 L 215 53 C 180 56, 140 68, 100 92 C 88 99, 76 100, 68 96 Z" fill="#ffffff" opacity="0.5"/>
+              <path d="M255 80 C 268 90, 280 102, 290 116 L 278 122 C 270 108, 260 96, 248 86 Z" fill="#15151a"/>
+              <path d="M298 118 C 304 122, 308 128, 308 134 C 308 140, 303 143, 297 141 C 293 139, 291 134, 292 129 C 293 124, 295 120, 298 118 Z" fill="#1b1b1f" stroke="#54545a" stroke-width="1"/>
+            </g>
+            <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150
+              L 334 134 C 328 138, 318 144, 300 148 C 230 162, 130 168, 50 172 C 35 173, 23 169, 22 162 Z"
+              fill="url(#soleGrad-drift)"/>
+            <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150"
+              fill="none" stroke="#6a6a70" stroke-width="1" opacity="0.5"/>
+            <g stroke="#000000" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+              <line x1="60" y1="174" x2="59" y2="180"/>
+              <line x1="95" y1="171" x2="94" y2="178"/>
+              <line x1="130" y1="169" x2="129" y2="176"/>
+              <line x1="165" y1="166" x2="164" y2="173"/>
+              <line x1="200" y1="163" x2="200" y2="171"/>
+              <line x1="235" y1="160" x2="235" y2="168"/>
+              <line x1="270" y1="156" x2="270" y2="164"/>
+              <line x1="305" y1="150" x2="306" y2="158"/>
+            </g>
+            <path d="M24 152 C 26 148, 32 145, 40 144 L 318 122" fill="none" stroke="#86868c" stroke-width="2" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3>Drift Trail</h3>
+        <p style="color:rgba(245,243,238,0.6); font-size:0.88rem;">Lugged grip and rock plate for off-road days.</p>
+        <div class="product-meta">
+          <span class="price">$165</span>
+          <span class="stat">224G</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="product-card">
+      <div class="product-inner">
+        <div class="product-shoe">
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bodyGrad-glide" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="60%" stop-color="#E9E7E0"/>
+                <stop offset="100%" stop-color="#B8B5AB"/>
+              </linearGradient>
+              <linearGradient id="soleGrad-glide" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#4a4a50"/>
+                <stop offset="40%" stop-color="#222226"/>
+                <stop offset="100%" stop-color="#070708"/>
+              </linearGradient>
+              <linearGradient id="accentGrad-glide" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#8A8A90"/>
+                <stop offset="100%" stop-color="#46464C"/>
+              </linearGradient>
+              <linearGradient id="heelGrad-glide" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#5c5c62"/>
+                <stop offset="100%" stop-color="#26262a"/>
+              </linearGradient>
+              <clipPath id="shoeClip-glide">
+                <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"/>
+              </clipPath>
+            </defs>
+            <ellipse cx="190" cy="196" rx="175" ry="13" fill="#000000" opacity="0.18"/>
+            <path d="M20 158 L24 140 C 28 118, 42 100, 64 90 L 140 56 C 158 48, 178 45, 196 49 L 230 58 C 248 63, 262 74, 270 90 L 300 108 C 318 114, 330 122, 334 134 L 336 150 C 337 160, 332 168, 322 170 L 50 178 C 32 179, 21 171, 20 158 Z"
+              fill="url(#bodyGrad-glide)"/>
+            <g clip-path="url(#shoeClip-glide)">
+              <path d="M255 80 C 272 92, 288 108, 300 128 C 308 142, 310 156, 306 172 L 250 175 C 258 150, 256 122, 244 96 Z" fill="url(#heelGrad-glide)"/>
+              <path d="M20 158 L24 140 C 27 122, 36 106, 50 95 L 78 100 C 62 114, 52 132, 50 154 L 48 174 L 32 175 C 24 172, 20 166, 20 158 Z" fill="#d8d5cc"/>
+              <path d="M58 138 C 110 122, 175 110, 248 104 C 256 103, 262 108, 260 114 C 258 120, 250 124, 242 125 C 175 132, 115 144, 68 160 C 60 163, 53 159, 54 152 C 55 146, 55 141, 58 138 Z" fill="url(#accentGrad-glide)"/>
+              <path d="M80 132 L150 70" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+              <path d="M210 116 L250 88" stroke="#aba89e" stroke-width="1" opacity="0.6"/>
+              <g fill="#9c998f" opacity="0.45">
+                <circle cx="60" cy="118" r="1.4"/><circle cx="68" cy="112" r="1.4"/><circle cx="76" cy="106" r="1.4"/>
+                <circle cx="64" cy="126" r="1.4"/><circle cx="72" cy="120" r="1.4"/><circle cx="80" cy="114" r="1.4"/>
+                <circle cx="68" cy="134" r="1.4"/><circle cx="76" cy="128" r="1.4"/><circle cx="84" cy="122" r="1.4"/>
+              </g>
+              <path d="M148 62 C 161 56, 176 54, 189 57 C 186 68, 182 80, 180 92 L 158 90 C 157 80, 153 70, 148 62 Z" fill="#e3e0d7"/>
+              <path d="M148 62 C 161 56, 176 54, 189 57" stroke="#ffffff" stroke-width="2" opacity="0.7" fill="none"/>
+              <path d="M158 90 L180 92 L179 96 L159 94 Z" fill="#c4c1b6"/>
+              <g stroke="#7a766c" stroke-width="3" stroke-linecap="round">
+                <line x1="142" y1="64" x2="124" y2="86"/>
+                <line x1="158" y1="58" x2="141" y2="80"/>
+                <line x1="176" y1="54" x2="160" y2="75"/>
+                <line x1="194" y1="53" x2="180" y2="73"/>
+                <line x1="212" y1="56" x2="200" y2="75"/>
+              </g>
+              <g stroke="#3f3c36" stroke-width="1" stroke-linecap="round" opacity="0.5">
+                <line x1="142" y1="64" x2="124" y2="86"/>
+                <line x1="158" y1="58" x2="141" y2="80"/>
+                <line x1="176" y1="54" x2="160" y2="75"/>
+                <line x1="194" y1="53" x2="180" y2="73"/>
+                <line x1="212" y1="56" x2="200" y2="75"/>
+              </g>
+              <g fill="#2a2a2c">
+                <circle cx="142" cy="64" r="2.2"/><circle cx="124" cy="86" r="2.2"/>
+                <circle cx="158" cy="58" r="2.2"/><circle cx="141" cy="80" r="2.2"/>
+                <circle cx="176" cy="54" r="2.2"/><circle cx="160" cy="75" r="2.2"/>
+                <circle cx="194" cy="53" r="2.2"/><circle cx="180" cy="73" r="2.2"/>
+                <circle cx="212" cy="56" r="2.2"/><circle cx="200" cy="75" r="2.2"/>
+              </g>
+              <path d="M64 90 L140 56 C 158 48, 178 45, 196 49 L 215 53 C 180 56, 140 68, 100 92 C 88 99, 76 100, 68 96 Z" fill="#ffffff" opacity="0.5"/>
+              <path d="M255 80 C 268 90, 280 102, 290 116 L 278 122 C 270 108, 260 96, 248 86 Z" fill="#15151a"/>
+              <path d="M298 118 C 304 122, 308 128, 308 134 C 308 140, 303 143, 297 141 C 293 139, 291 134, 292 129 C 293 124, 295 120, 298 118 Z" fill="#1b1b1f" stroke="#54545a" stroke-width="1"/>
+            </g>
+            <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150
+              L 334 134 C 328 138, 318 144, 300 148 C 230 162, 130 168, 50 172 C 35 173, 23 169, 22 162 Z"
+              fill="url(#soleGrad-glide)"/>
+            <path d="M22 162 C 21 171, 28 178, 42 178 L 322 170 C 333 169, 338 161, 336 150"
+              fill="none" stroke="#6a6a70" stroke-width="1" opacity="0.5"/>
+            <g stroke="#000000" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+              <line x1="60" y1="174" x2="59" y2="180"/>
+              <line x1="95" y1="171" x2="94" y2="178"/>
+              <line x1="130" y1="169" x2="129" y2="176"/>
+              <line x1="165" y1="166" x2="164" y2="173"/>
+              <line x1="200" y1="163" x2="200" y2="171"/>
+              <line x1="235" y1="160" x2="235" y2="168"/>
+              <line x1="270" y1="156" x2="270" y2="164"/>
+              <line x1="305" y1="150" x2="306" y2="158"/>
+            </g>
+            <path d="M24 152 C 26 148, 32 145, 40 144 L 318 122" fill="none" stroke="#86868c" stroke-width="2" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3>Glide Daily</h3>
+        <p style="color:rgba(245,243,238,0.6); font-size:0.88rem;">Max cushion for the everyday mileage grind.</p>
+        <div class="product-meta">
+          <span class="price">$149</span>
+          <span class="stat">252G</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="stats" id="stats">
+  <div class="stat-item">
+    <div class="stat-num">189g</div>
+    <div class="stat-label">Lightest Build</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">71%</div>
+    <div class="stat-label">Energy Return</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">04:12</div>
+    <div class="stat-label">Avg. PR Drop / Mi</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">06</div>
+    <div class="stat-label">Terrain Types</div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Stop pacing<br>yourself. <span class="accent">Run.</span></h2>
+  <a href="#showcase" class="btn-primary">Shop The Lineup</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#showcase">Surge RC</a>
+      <a href="#showcase">Drift Trail</a>
+      <a href="#showcase">Glide Daily</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Sizing Guide</a>
+      <a href="#">Returns</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Strava</a>
+      <a href="#">TikTok</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 VELOC. All rights reserved.</span>
+    <span>Outrun everything.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
